@@ -6,8 +6,7 @@ class ResponseBook {
   ResponseBook({
     this.status,
     this.message,
-    this.data,
-  });
+    this.data,});
 
   ResponseBook.fromJson(dynamic json) {
     status = json['status'];
@@ -19,7 +18,6 @@ class ResponseBook {
       });
     }
   }
-
   int? status;
   String? message;
   List<DataBook>? data;
@@ -33,6 +31,7 @@ class ResponseBook {
     }
     return map;
   }
+
 }
 
 /// id : 1
@@ -55,8 +54,7 @@ class DataBook {
     this.tahunTerbit,
     this.createdAt,
     this.updatedAt,
-    this.kategori,
-  });
+    this.kategori,});
 
   DataBook.fromJson(dynamic json) {
     id = json['id'];
@@ -67,10 +65,8 @@ class DataBook {
     tahunTerbit = json['tahun_terbit'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
-    kategori =
-        json['kategori'] != null ? Kategori.fromJson(json['kategori']) : null;
+    kategori = json['kategori'] != null ? Kategori.fromJson(json['kategori']) : null;
   }
-
   int? id;
   int? kategoriId;
   String? judul;
@@ -96,6 +92,7 @@ class DataBook {
     }
     return map;
   }
+
 }
 
 /// id : 1
@@ -104,14 +101,12 @@ class DataBook {
 class Kategori {
   Kategori({
     this.id,
-    this.nama,
-  });
+    this.nama,});
 
   Kategori.fromJson(dynamic json) {
     id = json['id'];
     nama = json['nama'];
   }
-
   int? id;
   String? nama;
 
@@ -121,4 +116,5 @@ class Kategori {
     map['nama'] = nama;
     return map;
   }
+
 }

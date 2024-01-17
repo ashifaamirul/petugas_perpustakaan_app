@@ -15,6 +15,7 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
+
       body: Center(
           child: Column(
         children: [
@@ -26,6 +27,8 @@ class HomeView extends GetView<HomeController> {
               child: Text("Peminjaman")),
         ],
       )),
+
+
     );
   }
 }
